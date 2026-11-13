@@ -12,26 +12,35 @@ body {
   border: 2px solid wheat;
   box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.8);
   /* width: 70%; */
-  max-width: 600px;
+  max-width: 1000px;
   border-radius:15px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
   
 }
 fieldset{
-  height: 250px;
+  height: 350px;
   width: 350px;
 }
 
 
 label {
-  width: 300px;
+  width: 400px;
   height: 25px;
   display: inline-block;
+  font-size: larger;
 
 } 
 
 input{
-  width: 300px;
-  height: 25px;
+  width: 400px;
+  height: 30px;
+}
+#source{
+  width: 400px;
+  height: 30px;
+  display: inline-block;
 }
 h3{
   color:blue;
@@ -43,4 +52,25 @@ h3{
   .headings{
     margin-left: -180px;
   }
+  h1:hover{
+    color: salmon;
+  }
+button{ 
+  color: azure;
+  font-size: large;
+  background-color: rgb(90, 132, 183);
+  margin: 30px;
+  height: 35px;
+  width: 300px;
+  border-radius: 10px;
+  border-color: salmon;
+ 
+}
+button:hover{
+  background-color: salmon;
+}
+legend{
+  color:brown;
+  font-size: larger;
+}
 

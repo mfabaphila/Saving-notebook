@@ -33,7 +33,7 @@ localStorage.setItem("amounts", JSON.stringify(updatedAmount))
   return(
 
   <>
-    <h1>Save and Record</h1>
+    <h1>Save and Record </h1>
     <div className="box">
   <fieldset div className="forms">
     <legend>Any Amount takes you closer to your goal</legend>
@@ -44,7 +44,7 @@ localStorage.setItem("amounts", JSON.stringify(updatedAmount))
   <abbr title="Where did you get the money you are saving?">Source</abbr>
 </label>
 
-<select value={source} onChange= {(e)=>setSource(e.target.value)} required>
+<select  id="source" value={source} onChange= {(e)=>setSource(e.target.value)} required>
   <option value="" disabled selected>Select Source of Amount</option>
   <option value="salary">Salary</option>
   <option value="rent">Rent</option>
