@@ -34,6 +34,7 @@ localStorage.setItem("amounts", JSON.stringify(updatedAmount))
 
   <>
     <h1>Save and Record</h1>
+    <div className="box">
   <fieldset div className="forms">
     <legend>Any Amount takes you closer to your goal</legend>
   
@@ -78,7 +79,9 @@ onChange={(event)=>setAmount(event.target.value)} required
 />
 <button>Add Amount</button>
     </form>
+    
   </fieldset>
+   </div>
   </>
 
   )
