@@ -7,26 +7,29 @@ body {
  
 }
 
-.box {
+/* .box {
   background: rgb(240, 180, 180);
-  border: 2px solid wheat;
-  box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.8);
-  /* width: 70%; */
+  /* border: 2px solid wheat;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.8); */
+  width: 70%;
   max-width: 1000px;
-  border-radius:15px;
+  /* border-radius:15px; */
   max-width: 600px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto; 
+  ignore this. is for login page.
   
-}
+} */
 fieldset{
-  height: 350px;
-  width: 350px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
 }
+
 
 
 label {
-  width: 400px;
+  width: 100px;
   height: 25px;
   display: inline-block;
   font-size: larger;
@@ -34,11 +37,11 @@ label {
 } 
 
 input{
-  width: 400px;
-  height: 30px;
+  width: 200px;
+  height: 20px;
 }
 #source{
-  width: 400px;
+  width: 200px;
   height: 30px;
   display: inline-block;
 }
@@ -61,7 +64,7 @@ button{
   background-color: rgb(90, 132, 183);
   margin: 30px;
   height: 35px;
-  width: 300px;
+  width: 200px;
   border-radius: 10px;
   border-color: salmon;
  
@@ -72,5 +75,10 @@ button:hover{
 legend{
   color:brown;
   font-size: larger;
+}
+
+table,td,th,tr{
+  border-collapse: collapse;
+  border: 1px solid salmon;
 }
 

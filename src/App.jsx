@@ -57,6 +57,7 @@ localStorage.setItem("amounts", JSON.stringify(updatedAmount))
 <input 
 type="date"
 value={date}
+
 placeholder="Select a date"
 onChange={(event)=>setDate(event.target.value)} required
 />
@@ -79,6 +80,32 @@ onChange={(event)=>setAmount(event.target.value)} required
 />
 <button>Add Amount</button>
     </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>SOURCE</th>
+          <th>DATE</th>
+               <th>PURPOSE</th>
+                    <th>AMOUNT</th>  
+                   
+        </tr>
+      </thead>
+      <tbody>
+{amounts.map((item,index)=>(
+  <tr key ={index}>
+        <td>{item.source}</td>
+     <td>{item.date}</td>
+      <td>{item.purpose}</td>
+       <td>{item.amount}</td>
+  </tr>
+)
+)
+}
+ 
+  
+      </tbody>
+    </table>
     
   </fieldset>
    </div>
