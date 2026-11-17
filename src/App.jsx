@@ -29,6 +29,11 @@ setAmounts(updatedAmount)
 localStorage.setItem("amounts", JSON.stringify(updatedAmount))
 }
 
+const remove =(index)=>{
+const updatedList = amounts.filter((item,i)=> i !==index)
+setAmounts(updatedList)
+localStorage.setItem("amount", JSON.stringify(updatedList))
+}
 
   return(
 
@@ -46,11 +51,11 @@ localStorage.setItem("amounts", JSON.stringify(updatedAmount))
 
 <select  id="source" value={source} onChange= {(e)=>setSource(e.target.value)} required>
   <option value="" disabled selected>Select Source of Amount</option>
-  <option value="salary">Salary</option>
-  <option value="rent">Rent</option>
-<option value="freelance">Freelance</option>
-<option value="investment">Investment</option>
-<option value="gift">Gift</option>
+  <option value="Salary">Salary</option>
+  <option value="Rent">Rent</option>
+<option value="Freelance">Freelance</option>
+<option value="Investment">Investment</option>
+<option value="Gift">Gift</option>
 </select>
 
 <label>Date</label>
@@ -88,6 +93,7 @@ onChange={(event)=>setAmount(event.target.value)} required
           <th>DATE</th>
                <th>PURPOSE</th>
                     <th>AMOUNT</th>  
+                    <th>ACTION</th>
                    
         </tr>
       </thead>
@@ -98,6 +104,9 @@ onChange={(event)=>setAmount(event.target.value)} required
      <td>{item.date}</td>
       <td>{item.purpose}</td>
        <td>{item.amount}</td>
+       <th>
+       <button onClick={()=>remove(index)}>Remove</button>
+       </th>
   </tr>
 )
 )

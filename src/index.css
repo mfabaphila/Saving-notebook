@@ -60,10 +60,10 @@ h3{
   }
 button{ 
   color: azure;
-  font-size: large;
+  font-size: medium;
   background-color: rgb(90, 132, 183);
-  margin: 30px;
-  height: 35px;
+  margin: 4px 5px;
+  height: 25px;
   width: 200px;
   border-radius: 10px;
   border-color: salmon;
