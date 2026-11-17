@@ -105,7 +105,11 @@ onChange={(event)=>setAmount(event.target.value)} required
       <td>{item.purpose}</td>
        <td>{item.amount}</td>
        <th>
-       <button onClick={()=>remove(index)}>Remove</button>
+        <abbr title="Delete permanently?">
+
+       
+       <button id="delBtn" onClick={()=>remove(index)}>Del</button>
+        </abbr>
        </th>
   </tr>
 )

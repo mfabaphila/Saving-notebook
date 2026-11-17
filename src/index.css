@@ -81,4 +81,12 @@ table,td,th,tr{
   border-collapse: collapse;
   border: 1px solid salmon;
 }
-
+#delBtn{
+  background-color: red;
+  color: black;
+  width: 50px;
+  cursor: pointer;
+}
+#delBtn:hover{
+background-color: salmon;
+}
