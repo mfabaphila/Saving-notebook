@@ -7,19 +7,6 @@ body {
  
 }
 
-/* .box {
-  background: rgb(240, 180, 180);
-  /* border: 2px solid wheat;
-  box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.8); */
-  width: 70%;
-  max-width: 1000px;
-  /* border-radius:15px; */
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto; 
-  ignore this. is for login page.
-  
-} */
 fieldset{
   width: 100%;
   max-width: 800px;
