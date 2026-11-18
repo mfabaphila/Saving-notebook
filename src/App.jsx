@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import "./index.css";
 
 export default function App(){
@@ -8,6 +8,7 @@ export default function App(){
   const [date, setDate] = useState("");
 const [amount, setAmount] = useState("");
 const[source, setSource] =useState("")
+const[exchange, setExchange] =useState("")
 const [amounts, setAmounts]=useState(
   JSON.parse(localStorage.getItem("amounts"))||[]
 )
@@ -35,10 +36,21 @@ setAmounts(updatedList)
 localStorage.setItem("amount", JSON.stringify(updatedList))
 }
 
+useEffect(()=>{
+  fetch("https://open.er-api.com/v6/latest/USD")
+  .then((results)=>results.json())
+  .then((data)=>{
+    setExchange(data.rates.ZAR.toFixed(2))
+  
+  })
+},
+[])
+
   return(
 
   <>
     <h1>Save and Record </h1>
+    <p style={{color:"salmon", fontSize:"larger"}}> R1 = {exchange} USD</p>
     <div className="box">
   <fieldset div className="forms">
     <legend>Any Amount takes you closer to your goal</legend>
