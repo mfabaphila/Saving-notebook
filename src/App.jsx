@@ -201,7 +201,7 @@ function LoginPage() {
 
       <div className="box">
         <h2>Keep track of your savings</h2>
-        <h3>Enter your details to login</h3>
+        <h3 style={{color:"blueviolet"}}>Enter your details to login</h3>
         <label>Name</label>
         <input
           type="text"
