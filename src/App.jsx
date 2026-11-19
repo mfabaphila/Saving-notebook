@@ -49,7 +49,7 @@ useEffect(()=>{
   return(
 
   <>
-    <h1 style={{color:"wheat"}}>Save and Record </h1>
+    <h1 style={{color:"wheat"}}>Save and Record </h1>git
     <p style={{color:"salmon", fontSize:"larger"}}> R1 = {exchange} USD</p>
     <div className="box">
   <fieldset div className="forms">
@@ -196,7 +196,7 @@ function LoginPage() {
   return (
     <>
       <div className="headings">
-        <h1>The Saving NoteBook</h1>
+        <h1 style={{color:"wheat"}}>The Saving NoteBook</h1>
       </div>
 
       <div className="box">
@@ -221,7 +221,7 @@ function LoginPage() {
         />
        
 
-        <label>Username</label>
+        <label>Username/s</label>
         <input
           type="text"
           placeholder="Enter your Username"
