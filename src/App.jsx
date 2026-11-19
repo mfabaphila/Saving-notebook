@@ -49,7 +49,7 @@ useEffect(()=>{
   return(
 
   <>
-    <h1>Save and Record </h1>
+    <h1 style={{color:"wheat"}}>Save and Record </h1>
     <p style={{color:"salmon", fontSize:"larger"}}> R1 = {exchange} USD</p>
     <div className="box">
   <fieldset div className="forms">
