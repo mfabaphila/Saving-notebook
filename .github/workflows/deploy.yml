@@ -1,5 +1,4 @@
-
-name: Deploy React App to EC2
+﻿name: Deploy Saving-notebook to EC2
 
 on:
   push:
@@ -11,23 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy to EC2
-        env:
-          EC2_HOST: ${{ secrets.EC2_HOST }}
-          EC2_USER: ${{ secrets.EC2_USER }}
-          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
-        run: |
-          mkdir -p "$HOME/.ssh"
-          printf '%s\n' "$EC2_SSH_KEY" > "$HOME/.ssh/ec2_key"
-          chmod 600 "$HOME/.ssh/ec2_key"
-          ssh-keyscan -H "$EC2_HOST" >> "$HOME/.ssh/known_hosts"
-
-          ssh -i "$HOME/.ssh/ec2_key" "$EC2_USER@$EC2_HOST" << 'EOF'
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
             set -e
-            cd /home/ec2-user/Saving-notebook
-            git pull origin main
+            cd ~/Saving-notebook
+            git fetch origin main
+            git reset --hard origin/main
             docker build -t saving-notebook .
             docker stop money-book || true
             docker rm money-book || true
-            docker run -d --name money-book -p 8000:80 saving-notebook
-          EOF
+            docker run -d --name money-book -p 80:80 saving-notebook
